@@ -23,3 +23,9 @@ function activeUser() {
 
   }
 };
+
+// function for what happens when the dice is rolled
+Player .prototype.roll=function() {
+  var randomNo = Math.floor((Math.random()*6) +1);
+  this.
+}
