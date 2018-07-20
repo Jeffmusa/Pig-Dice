@@ -103,6 +103,23 @@ $(document).ready(function() {
       $("#rulesDefinitions").hide();
       $("form").hide();
       $(".newGame").show();
+      $(".newGame").click(function(){ //Makes new Game title clickeable and the form reappear
+        $("form").show();
+        $('#gamingArea').hide();
+        $(".newGame").hide();
+        resetFields();
+      });
+      $('#gamingArea').show();
+      // players names stored in variables
+      var gamer1 = $("#player1Name").val();
+      var gamer2 = $("#player2Name").val();
+      // names put into an object using the constructor players.
+      player1 = new Player(gamer1);
+      player2 = new Player(gamer2);
+      // output the names into each appropriate Section
+      $(".player1NameOutput").text(player1.name);
+      $(".player2NameOutput").text(player2.name);
+      resetFields(); //clears the form input fields
     )
   })
 })
