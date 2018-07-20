@@ -1,3 +1,5 @@
+
+// Back end logic
 function Player (name,turnTotal,diceRoll,overallScore,active){
   this.name=name;
   this.diceRoll=0;
