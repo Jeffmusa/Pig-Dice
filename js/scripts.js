@@ -17,6 +17,7 @@ function activeUser() {
     $('.player2Area').addClass('disableGamingArea');
   }else {
     $('.player1Area').children().prop('disabled',true);
+    $('.player1Area').addClass('disableGamingArea');
 
   }
 }
