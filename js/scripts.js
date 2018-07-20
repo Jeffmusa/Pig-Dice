@@ -18,6 +18,8 @@ function activeUser() {
   }else {
     $('.player1Area').children().prop('disabled',true);
     $('.player1Area').addClass('disableGamingArea');
+    $('.player2Area').children().prop('disabled',false);
+    $('.player2Area').removeClass('disableGamingArea');
 
   }
-}
+};
