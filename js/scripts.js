@@ -122,5 +122,7 @@ $(document).ready(function() {
       resetFields(); //clears the form input fields
   });
   // Display dice roll number and turn total when roll is clicked
+$('.roll1').click(function(event) { //player 1 roll button
 
+})
 })
