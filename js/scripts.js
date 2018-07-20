@@ -58,7 +58,7 @@ Player.prototype.roll = function () {
 Player.prototype.hold = function () {
     activeUser();
     this.overallScore += this.turnTotal;
-    if (this.overallScore >= 100) {
+    if (this.overallScore >= 20) {
         alert("Game Over. YOU WIN!!!");
         resetFields();
         alert('To play with a new partner click New Game.')
@@ -91,8 +91,9 @@ function resetFields() {
 };
 //FRONT END LOGIC
 $(document).ready(function () {
-    $("#rulesHeader").click(function () { //Makes the 'Rules' title clickeable and the rules themselves hideable.
-        $("#rulesDefinitions").toggle();
+    $("#rulesHeader").hover(function () { //Makes the 'Rules' title clickeable and the rules themselves hideable.
+        $("#rulesDefinitions").show(1000);
+
     });
     //Actions when player enters name
     $("#playerNames").submit(function (event) {
@@ -106,7 +107,7 @@ $(document).ready(function () {
             $(".newGame").hide();
             resetFields();
         });
-        $('#gamingArea').show();
+        $('#gamingArea').show(1000);
         //Store the players names in variables.
         var gamer1 = $("#player1Name").val();
         var gamer2 = $("#player2Name").val();
