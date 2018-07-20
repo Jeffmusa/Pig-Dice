@@ -27,5 +27,46 @@ function activeUser() {
 // function for what happens when the dice is rolled
 Player .prototype.roll=function() {
   var randomNo = Math.floor((Math.random()*6) +1);
-  this.
+  this.diceRoll= randomNo;
+  activeUser();
+  if(randomNo === 1){
+    this.turnTotal= 0;
+    this.diceRoll= 1;
+    if (this.active === player1.active) {
+      player1.active = false;
+      player2.active = true;
+      $('.player1Area').children().prop('disabled',true);
+      $('.player1Area').addClass('disableGamingArea');
+      $('.player2Area').children().prop('disabled',false);
+      $('.player2Area').removeClass('disableGamingArea');
+    }else if(this.active === player2.active) {
+      player2.active = false;
+      player1.active = true;
+      $('.player2Area').children().prop('disabled',true);
+      $('.player2Area').addClass('disableGamingArea');
+      $('.player1Area').children().prop('disabled',false);
+      $('.player1Area').removeClass('disableGamingArea');
+    } else {
+      console.log("Ain't working");
+    }
+    return alert("Oh No, you got a 1.Your turn is over!! Next player.";)
+  }else{
+    this.turnTotal += randomNo;
+  };
+  return this.diceRoll;
+};
+
+// function for holding the game
+Player.prototype.hold = function() {
+  activeUser();
+  this.overallScore += this.turnTotal;
+  if (this.overallScore >= 100) {
+    alert("The Game is over.YOU WIN!!");
+    resetFields();
+  // an alert can be added here
+} else {
+  return false;
 }
+console.log('the turn total is: ' + this.turnTotal);
+return this.overallScore;
+};
