@@ -82,7 +82,7 @@ border: 10px solid red;
     font-weight: bolder;
 }
 .newGame:hover {
-    color: white;
+    color: red;
 }
 #playingForm {
     background-color: rgba(238, 238, 238, 0.4);
@@ -98,6 +98,7 @@ form h3{
     font-size: 40px;
     font-weight: bolder;
 }
+
 button#playButton {
     width: 16%;
     margin-left: 42%;
@@ -109,6 +110,7 @@ button#playButton {
     width: 80%;
     margin: 10px auto;
     font-size: 22.5px;
+
 }
 .player1Area,
 .player2Area {
