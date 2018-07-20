@@ -8,6 +8,7 @@
     background-image: url("../images/dice.jpg");
     background-size: cover;
     color: black;
+    background-attachment: fixed;
 }
 .av{
  width: 70px;
@@ -129,7 +130,13 @@ button#playButton {
     width: 80%;
     margin: 10px auto;
     font-size: 22.5px;
-    background-image: url("");
+    background-image: url("../images/green2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+button{
+  font-family: 'Shrikhand', cursive;
 }
 
 .player1Area,
@@ -143,9 +150,9 @@ button#playButton {
     color: white;
 }
 #gamingArea img{
-    border: 5px solid #001f75;
+    border: 5px solid red;
     border-radius: 4px;
-    box-shadow: 0px 0px 10px #001f75;
+    box-shadow: 0px 0px 10px blue;
     width: 200px;
     height: 210px;
 }
