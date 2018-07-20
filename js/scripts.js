@@ -94,6 +94,7 @@ $(document).ready(function () {
     $("#rulesHeader").hover(function () { //Makes the 'Rules' title clickeable and the rules themselves hideable.
         $("#rulesDefinitions").show(1000);
 
+
     });
     //Actions when player enters name
     $("#playerNames").submit(function (event) {
