@@ -93,3 +93,9 @@ function resetFields() {
 
 
 // FRONT END LOGIC
+$(document).ready(function() {
+  $("#rulesHeader").click(function(){
+    $("#rulesDefinitions").toggle();
+  });
+  
+})
