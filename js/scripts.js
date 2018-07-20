@@ -97,5 +97,12 @@ $(document).ready(function() {
   $("#rulesHeader").click(function(){
     $("#rulesDefinitions").toggle();
   });
-  
+  // Actions when players enter their Names
+  $("#playerNames").submit(function(event){
+    event.preventDefault(
+      $("#rulesDefinitions").hide();
+      $("form").hide();
+      $(".newGame").show();
+    )
+  })
 })
