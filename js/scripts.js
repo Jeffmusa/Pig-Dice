@@ -99,7 +99,7 @@ $(document).ready(function() {
   });
   // Actions when players enter their Names
   $("#playerNames").submit(function(event){
-    event.preventDefault(
+    event.preventDefault();
       $("#rulesDefinitions").hide();
       $("form").hide();
       $(".newGame").show();
@@ -120,6 +120,7 @@ $(document).ready(function() {
       $(".player1NameOutput").text(player1.name);
       $(".player2NameOutput").text(player2.name);
       resetFields(); //clears the form input fields
-    )
-  })
+  });
+  // Display dice roll number and turn total when roll is clicked
+
 })
