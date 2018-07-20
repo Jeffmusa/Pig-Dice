@@ -90,3 +90,6 @@ function resetFields() {
     output.text(0);
   })
 };
+
+
+// FRONT END LOGIC
