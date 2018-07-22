@@ -23,15 +23,15 @@ function activeUser() {
         $('.player2Area').removeClass('disableGamingArea');
     }
 };
-//Funtion on what is to happen when the dice is rolled.
+//what to happen when the dice is rolled.
 Player.prototype.roll = function () {
-    var randomNo = Math.floor((Math.random() * 6) + 1); //Random no generator from 1-6.
+    var randomNo = Math.floor((Math.random() * 6) + 1);
     this.diceRoll = randomNo;
     activeUser();
     if (randomNo === 1) {
         this.turnTotal = 0;
         this.diceRoll = 1;
-        if (this.active === player1.active) { //disable and enable gaming areas when dice is a 1 according to which player is active.
+        if (this.active === player1.active) { //disable and enable gaming areas when dice is a 1
             player1.active = false;
             player2.active = true;
             $('.player1Area').children().prop('disabled', true);
@@ -48,7 +48,7 @@ Player.prototype.roll = function () {
         } else {
             console.log("not working");
         }
-        return alert("Oh No!! You got a 1. Your turn is over!");
+        return alert("Oh No!! You got a 1. Your turn is OVER! Next player's turn");
     } else {
         this.turnTotal += randomNo;
     };
@@ -58,8 +58,8 @@ Player.prototype.roll = function () {
 Player.prototype.hold = function () {
     activeUser();
     this.overallScore += this.turnTotal;
-    if (this.overallScore >= 100) {
-        alert("Game Over. YOU WIN!!!");
+    if (this.overallScore >= 10) {
+        alert("Game Over. YOU ARE THE WINNER WIN AGAIN IF YOU CAN!!!");
         resetFields();
         alert('To play with a new partner click New Game.')
 
@@ -89,9 +89,9 @@ function resetFields() {
     })
 
 };
-//FRONT END LOGIC
+                                      //FRONT END LOGIC
 $(document).ready(function () {
-    $("#rulesHeader").hover(function () { //Makes the 'Rules' title clickeable and the rules themselves hideable.
+    $("#rulesHeader").click(function () { //Makes the 'Rules' title clickeable and the rules themselves hideable.
         $("#rulesDefinitions").show(1000);
 
 
