@@ -58,7 +58,7 @@ Player.prototype.roll = function () {
 Player.prototype.hold = function () {
     activeUser();
     this.overallScore += this.turnTotal;
-    if (this.overallScore >= 10) {
+    if (this.overallScore >= 100) {
         alert("Game Over. YOU ARE THE WINNER WIN AGAIN IF YOU CAN!!!");
         resetFields();
         alert('To play with a new partner click New Game.')
